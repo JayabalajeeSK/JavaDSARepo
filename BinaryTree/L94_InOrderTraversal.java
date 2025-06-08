@@ -14,7 +14,7 @@ class TreeNode
      {this.val = val; this.left = left; this.right = right;}
  }
 //------------------------------------------------
-class Solution 
+class Solution94 
 {
     public List<Integer> inorderTraversal(TreeNode root) 
     {
@@ -54,7 +54,7 @@ public class L94_InOrderTraversal {
 
         root.right.right.left = new TreeNode(9);
 
-        Solution sol = new Solution();
+        Solution94 sol = new Solution94();
         List<Integer> output = sol.inorderTraversal(root);
 
         System.out.println("Input: " + Arrays.toString(arr));
