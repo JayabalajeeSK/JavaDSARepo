@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinaryTree.Set0;
 public class L988_Lexicographically_Smaller_SmallestStringStartingFromLeaf 
 {
     private String smallestString = null;

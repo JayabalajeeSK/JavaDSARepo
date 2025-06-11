@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinaryTree.Set0;
 import java.util.Arrays;
 
 class TreeNode {

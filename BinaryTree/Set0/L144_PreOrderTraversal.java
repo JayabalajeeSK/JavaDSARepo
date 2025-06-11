@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinaryTree.Set0;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,26 +14,26 @@ class TreeNode
      {this.val = val; this.left = left; this.right = right;}
  }
 //------------------------------------------------
-class Solution145 
+class Solution144
 {
-    public List<Integer> postorderTraversal(TreeNode root) 
+    public List<Integer> preorderTraversal(TreeNode root) 
     {
         List <Integer> result = new ArrayList<Integer>();
-        postOrder(root, result);
+        preOrder(root, result);
         return result;
         
     }
 
-    private void postOrder(TreeNode root, List<Integer> result) 
+    private void preOrder(TreeNode root, List<Integer> result) 
     {
         if(root == null) return;
-        postOrder(root.left, result);
-        postOrder(root.right, result);
         result.add(root.val);
+        preOrder(root.left, result);
+        preOrder(root.right, result);
     }
 }
 //--------------------------------------------------
-public class L145_PostOrderTraversal {
+public class L144_PreOrderTraversal {
     public static void main(String[] args) {
         // Input as array (only for reference, actual tree is built manually)
         Integer[] arr = {1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9};
@@ -53,12 +53,12 @@ public class L145_PostOrderTraversal {
 
         root.right.right.left = new TreeNode(9);
 
-        Solution145 sol = new Solution145();
-        List<Integer> output = sol.postorderTraversal(root);
+        Solution144 sol = new Solution144();
+        List<Integer> output = sol.preorderTraversal(root);
 
         System.out.println("Input: " + Arrays.toString(arr));
-        System.out.println("postorder Output: " + output);
+        System.out.println("Pre Output: " + output);
     }
 }
 // Input: [1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]
-// postorder Output: [4, 6, 7, 5, 2, 9, 8, 3, 1]
+// Pre Output: [1, 2, 4, 5, 6, 7, 3, 8, 9]
