@@ -1,4 +1,4 @@
-package BinaryTree.Set0;
+package Sets.Set0;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
