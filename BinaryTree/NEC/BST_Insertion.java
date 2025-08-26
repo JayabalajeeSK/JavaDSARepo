@@ -4,6 +4,36 @@ import java.util.*;
 
 public class BST_Insertion extends TreeUtils 
 {
+        // Deletion
+        public TreeNode deleteNode(TreeNode root, int key) 
+        {
+            if(root==null) return root;
+
+            if(key < root.val) root.left = deleteNode(root.left, key);
+
+            else if(key > root.val) root.right = deleteNode(root.right, key);
+            
+            else
+            {
+                if(root.left==null) return root.right;
+                else if(root.right==null) return root.left;
+
+                root.val = minVal(root.right);
+                root.right = deleteNode(root.right, root.val);
+            }
+            return root;
+        }
+
+        public int minVal(TreeNode root)
+        {
+            int min=root.val;
+            while(root.left!=null)
+            {
+                min=root.left.val;
+                root=root.left;
+            }
+            return min;
+        }
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
@@ -28,6 +58,10 @@ public class BST_Insertion extends TreeUtils
         }
 
         TreeNode root = buildBST(arr);
+
+
+        int key = sc.nextInt();
+
 
         System.out.println("\n🧾 Binary Search Tree (Visual):");
         printTree(root, 0);

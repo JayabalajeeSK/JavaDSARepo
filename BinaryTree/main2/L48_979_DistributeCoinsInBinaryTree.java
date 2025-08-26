@@ -2,20 +2,21 @@ package main2;
 
 public class L48_979_DistributeCoinsInBinaryTree extends TreeUtils {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // Example: Tree input = [3, 0, 0]
         Integer[] input = {3, 0, 0};
 
         TreeNode root = buildBT(input);
         System.out.println("🧾 Original Tree:");
         printTree(root, 0);
-        System.out.println("📦 Tree Array: " + treeToString(root));
+        System.out.println(" Tree Array: " + treeToString(root));
 
         L48_979_DistributeCoinsInBinaryTree obj = new L48_979_DistributeCoinsInBinaryTree();
         int moves = obj.distributeCoins(root);
 
-        System.out.println("\n🚚 Minimum Moves Required: " + moves);
-        System.out.println("📦 Final Tree Array: " + treeToString(root));
+        System.out.println("Minimum Moves Required: " + moves);
+        System.out.println(" Final Tree Array: " + treeToString(root));
     }
     //------------------------------------------
     int ans=0;

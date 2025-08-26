@@ -1,4 +1,4 @@
-package NEC;
+package demo;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 
-class TreeUtils extends TreeNode
+ class TreeUtils extends TreeNode
 {
     public static void printTree(TreeNode root, int level) 
     {
@@ -91,10 +91,10 @@ static TreeNode insertBST(TreeNode root, int val)
                     q.add(curr.left);
                     q.add(curr.right);
                 } 
-                else 
-                {
-                    res.add(null);
-                }
+                // else 
+                // {
+                //     res.add(null);
+                // }
             }
 
             // Trim trailing nulls

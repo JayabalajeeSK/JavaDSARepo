@@ -1,4 +1,4 @@
-package BinaryTree.BST;
+package BST;
 
 public class Solution99 
 {

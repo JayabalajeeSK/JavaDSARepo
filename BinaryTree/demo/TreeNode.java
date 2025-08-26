@@ -1,4 +1,4 @@
-package NEC;
+package demo;
 
 public class TreeNode  
 {
