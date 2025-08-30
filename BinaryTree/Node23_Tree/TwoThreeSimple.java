@@ -46,6 +46,7 @@ public class TwoThreeSimple
         }
 
         SplitResult res = insertInternal(node, key);
+        
         if (res != null) 
         { 
             Node23 newRoot = new Node23();
@@ -128,6 +129,8 @@ public class TwoThreeSimple
         return new SplitResult(temp[1], left, right);
     }
 
+    ////////////////////////////////////////////
+
     // Handle split in internal node
     private static SplitResult handleSplit(Node23 node, SplitResult res, int childIndex) 
     {
@@ -175,6 +178,8 @@ public class TwoThreeSimple
         }
     }
 
+    //////////////////////////////////////
+    
     // Inorder traversal
     public static void inorder(Node23 node) 
     {
@@ -231,3 +236,6 @@ public class TwoThreeSimple
     }
 }
 
+// Enter array input (like ["10","20","30","40"]):
+// 10 20 40 30 80 60
+// Inorder traversal: 10 20 30 40 60 80 

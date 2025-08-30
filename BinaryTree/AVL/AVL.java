@@ -151,6 +151,84 @@ public class AVL extends TreeUtils
 /// 
 /// Delete AVL
 /// 
+    static TreeNode deleteAVL(TreeNode root, int key) 
+    {
+        if (root == null) return root;
+
+        // Normal BST delete
+        if (key < root.val) 
+        {
+            root.left = deleteAVL(root.left, key);
+        } 
+        else if (key > root.val) 
+        {
+            root.right = deleteAVL(root.right, key);
+        } 
+        else 
+        {
+            // Node found
+            if ((root.left == null) || (root.right == null)) 
+            {
+                TreeNode temp = (root.left != null) ? root.left : root.right;
+
+                if (temp == null) 
+                {
+                    // No child
+                    root = null;
+                } 
+                else 
+                {
+                    // One child
+                    root = temp;
+                }
+            } 
+            else 
+            {
+                // Two children
+                TreeNode successor = minValueNode(root.right);
+                root.val = successor.val;
+                root.right = deleteAVL(root.right, successor.val);
+            }
+        }
+
+        // If tree had only one node
+        if (root == null) return root;
+
+        // Balance factor
+        int balance = getBalance(root);
+
+        // Rebalance
+        // LL
+        if (balance > 1 && getBalance(root.left) >= 0) 
+            return rightRotate(root);
+
+        // LR
+        if (balance > 1 && getBalance(root.left) < 0) 
+        {
+            root.left = leftRotate(root.left);
+            return rightRotate(root);
+        }
+
+        // RR
+        if (balance < -1 && getBalance(root.right) <= 0) 
+            return leftRotate(root);
+
+        // RL
+        if (balance < -1 && getBalance(root.right) > 0) 
+        {
+            root.right = rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return root;
+    }
+
+    // Helper for inorder successor
+    static TreeNode minValueNode(TreeNode node) 
+    {
+        TreeNode current = node;
+        while (current.left != null) current = current.left;
+        return current;
+    }
     ///////////////////////////////////////////////////////////////
 
     public static void printTree(TreeNode root, int level) 
