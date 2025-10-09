@@ -4,44 +4,40 @@ import java.util.*;
 
 public class SubsetSum 
 {
-    public static void findSubsets(int[] set, int target) 
+    public static boolean findSubset(int[] set, int target) 
     {
         List<Integer> current = new ArrayList<>();
-
-        List<List<Integer>> results = new ArrayList<>();
-
-        backtrack(set, target, 0, 0, current, results);
-
-        for (List<Integer> subset : results) 
-        {
-            System.out.print("[");
-            for (int num : subset) 
-            {
-                System.out.print(" "+ num + " ");
-            }
-            System.out.print("]");
-        }
+        return backtrack(set, target, 0, 0, current);
     }
 
-    private static void backtrack(int[] set, int target, int index, int currentSum, 
-                                  List<Integer> current, List<List<Integer>> results) 
+    private static boolean backtrack(int[] set, int target, int index, int currentSum, List<Integer> current) 
     {
         if (currentSum == target) 
         {
-            results.add(new ArrayList<>(current));
-            return;
+            System.out.print("Subset found: [");
+            for (int num : current) 
+            {
+                System.out.print(" " + num + " ");
+            }
+            System.out.println("]");
+            return true;   
         }
 
         if (currentSum > target || index >= set.length) 
         {
-            return;
+            return false;
         }
 
-        current.add(set[index]);
-        backtrack(set, target, index + 1, currentSum + set[index], current, results);
 
+        current.add(set[index]);
+        if (backtrack(set, target, index + 1, currentSum + set[index], current)) 
+        {
+            return true;
+        }
+
+    
         current.remove(current.size() - 1);
-        backtrack(set, target, index + 1, currentSum, current, results);
+        return backtrack(set, target, index + 1, currentSum, current);
     }
 
     public static void main(String[] args) 
@@ -61,12 +57,27 @@ public class SubsetSum
         System.out.print("Enter target sum: ");
         int sum = sc.nextInt();
 
-        findSubsets(set, sum);
+        boolean result = findSubset(set, sum);
+        if (!result) 
+        {
+            System.out.println("False");
+        }
+        else
+        {
+            System.out.println("True");
+
+        }
 
         sc.close();
     }
 }
-// Enter number of elements: 3
-// Enter elements: 1 2 1
-// Enter target sum: 3
-// [ 1  2 ][ 2  1 ]
+// Enter number of elements: 4
+// Enter elements: 1 3 5 2
+// Enter target sum: 10
+// Subset found: [ 3  5  2 ]
+// True
+
+// Enter number of elements: 5
+// Enter elements: 1 4 6 8 9
+// Enter target sum: 29
+// False

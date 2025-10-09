@@ -49,7 +49,6 @@ public class GraphListBFS
         boolean[] visited = new boolean[adjList.size()];
         Queue<Integer> queue = new LinkedList<>();
 
-        visited[start] = true;
         queue.add(start);
 
         System.out.print("BFS Traversal starting from " + start + ": ");
