@@ -51,7 +51,7 @@ public class Rat_In_A_Maze
             return res;
         }
         String s = "";
-        findPaths(m, 0, 1, s, n);
+        findPaths(m, 0, 0, s, n);
         return res;
     }
 
