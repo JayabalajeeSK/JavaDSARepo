@@ -3,7 +3,7 @@ package BackTracking;
 import java.util.*;
 
 
-public class SubsetSumChecker 
+public class B2_SubsetSumChecker1 
 {
     public static boolean canPartition(int[] nums) 
     {
@@ -68,3 +68,5 @@ public class SubsetSumChecker
 // Enter 4 numbers:
 // 1 5 11 5
 // YES
+
+//L416

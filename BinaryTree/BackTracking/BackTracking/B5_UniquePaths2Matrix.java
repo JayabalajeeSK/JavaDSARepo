@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class UniquePathsMatrix 
+public class B5_UniquePaths2Matrix 
 {
 
     // Function to find all paths from top-left to bottom-right
@@ -84,7 +84,15 @@ public class UniquePathsMatrix
         System.out.println(paths.size());
     }
 }
-
+// Enter number of rows: 2
+// Enter number of columns: 2
+// Enter the matrix elements row-wise:
+// 12
+// 34
+// All possible paths:
+// [1, 3, 4]
+// [1, 2, 4]
+// 2
 //
 // class Solution {
 //     public int uniquePaths(int m, int n) {
@@ -102,3 +110,40 @@ public class UniquePathsMatrix
 //         return dp[m-1][n-1];
 //     }
 // }
+
+// Enter number of rows: 3
+// Enter number of columns: 7
+// Enter the matrix elements row-wise:
+// 1234567
+// 891011121314
+// 15161718192021
+// All possible paths:
+// [1, 8, 15, 16, 17, 18, 19, 20, 21]
+// [1, 8, 9, 16, 17, 18, 19, 20, 21]
+// [1, 8, 9, 10, 17, 18, 19, 20, 21]
+// [1, 8, 9, 10, 11, 18, 19, 20, 21]
+// [1, 8, 9, 10, 11, 12, 19, 20, 21]
+// [1, 8, 9, 10, 11, 12, 13, 20, 21]
+// [1, 8, 9, 10, 11, 12, 13, 14, 21]
+// [1, 2, 9, 16, 17, 18, 19, 20, 21]
+// [1, 2, 9, 10, 17, 18, 19, 20, 21]
+// [1, 2, 9, 10, 11, 18, 19, 20, 21]
+// [1, 2, 9, 10, 11, 12, 19, 20, 21]
+// [1, 2, 9, 10, 11, 12, 13, 20, 21]
+// [1, 2, 9, 10, 11, 12, 13, 14, 21]
+// [1, 2, 3, 10, 17, 18, 19, 20, 21]
+// [1, 2, 3, 10, 11, 18, 19, 20, 21]
+// [1, 2, 3, 10, 11, 12, 19, 20, 21]
+// [1, 2, 3, 10, 11, 12, 13, 20, 21]
+// [1, 2, 3, 10, 11, 12, 13, 14, 21]
+// [1, 2, 3, 4, 11, 18, 19, 20, 21]
+// [1, 2, 3, 4, 11, 12, 19, 20, 21]
+// [1, 2, 3, 4, 11, 12, 13, 20, 21]
+// [1, 2, 3, 4, 11, 12, 13, 14, 21]
+// [1, 2, 3, 4, 5, 12, 19, 20, 21]
+// [1, 2, 3, 4, 5, 12, 13, 20, 21]
+// [1, 2, 3, 4, 5, 12, 13, 14, 21]
+// [1, 2, 3, 4, 5, 6, 13, 20, 21]
+// [1, 2, 3, 4, 5, 6, 13, 14, 21]
+// [1, 2, 3, 4, 5, 6, 7, 14, 21]
+// 28

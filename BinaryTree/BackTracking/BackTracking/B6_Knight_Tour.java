@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class Knight_Tour 
+public class B6_Knight_Tour 
 {
     public boolean isValid(int[][] grid, int i, int j, int expectedValue, int n) 
     {
@@ -58,7 +58,7 @@ public class Knight_Tour
         }
         sc.close();
 
-        Knight_Tour obj = new Knight_Tour();
+        B6_Knight_Tour obj = new B6_Knight_Tour();
         boolean result = obj.checkValidGrid(grid);
 
         System.out.println("Output: " + result);
@@ -77,3 +77,5 @@ public class Knight_Tour
 // 1
 // 0
 // Output: true
+
+// L2596

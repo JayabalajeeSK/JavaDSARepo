@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class SubsetGenerator 
+public class B1_SubsetGenerator 
 {
     static List<List<Integer>> allSubsets = new ArrayList<>();
 
@@ -52,6 +52,39 @@ public class SubsetGenerator
         }
     }
 }
+// Enter number of elements: 2
+// Enter 2 integers:
+// 6 7
+
+// All possible subsets:
+// [6, 7]
+// [6]
+// [7]
+// []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Enter number of elements: 3
 // Enter 3 integers:
 // 1 2 3
@@ -64,4 +97,14 @@ public class SubsetGenerator
 // [2, 3]
 // [2]
 // [3]
+// []
+
+// Enter number of elements: 2
+// Enter 2 integers:
+// 6 7
+
+// All possible subsets:
+// [6, 7]
+// [6]
+// [7]
 // []

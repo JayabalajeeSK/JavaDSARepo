@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class N_Queens
+public class B8_N_Queens
 {
     // Main function to solve N-Queens problem
     public List<List<String>> solveNQueens(int n) 
@@ -93,7 +93,7 @@ public class N_Queens
         int n = sc.nextInt();
         sc.close();
 
-        N_Queens obj = new N_Queens();
+        B8_N_Queens obj = new B8_N_Queens();
         List<List<String>> result = obj.solveNQueens(n);
 
         System.out.println("\nTotal Solutions: " + result.size());
@@ -959,3 +959,5 @@ public class N_Queens
 // .Q......
 // ......Q.
 // ....Q...
+
+//51

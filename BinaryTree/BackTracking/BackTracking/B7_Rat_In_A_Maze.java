@@ -3,7 +3,7 @@ package BackTracking;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Rat_In_A_Maze 
+public class B7_Rat_In_A_Maze 
 {
     static ArrayList<String> res;
     static int[][] visited;

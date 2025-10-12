@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class PrimeSumFinderOptimized 
+public class B3_PrimeSumFinderOptimized 
 {
 
     public static boolean isPrime(int num) 
@@ -126,3 +126,5 @@ public class PrimeSumFinderOptimized
         
 //     }
 // }
+
+//1761

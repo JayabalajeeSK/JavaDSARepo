@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class StringPermutations 
+public class B4_StringPermutations 
 {
 
     public static void generatePermutations(char[] chars, int index, List<String> result) 
@@ -65,7 +65,7 @@ public class StringPermutations
 // bac
 // bca
 // cab
-// cba
+// cbak
 
 // class Solution {
 //     public boolean checkInclusion(String s1, String s2) {
@@ -93,3 +93,5 @@ public class StringPermutations
 //         return false;
 //     }
 // }
+
+//567

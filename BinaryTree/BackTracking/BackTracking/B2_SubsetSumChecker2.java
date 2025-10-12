@@ -2,7 +2,7 @@ package BackTracking;
 
 import java.util.*;
 
-public class SubsetSumChecker2 
+public class B2_SubsetSumChecker2 
 {
 
     public static boolean isSubsetSum(int[] nums, int target) 
@@ -54,3 +54,8 @@ public class SubsetSumChecker2
 // 1 55 78 2
 // Enter the target sum: 4
 // false
+
+// Enter 4 numbers:
+// 1 3 5 1
+// Enter the target sum: 2
+// true
