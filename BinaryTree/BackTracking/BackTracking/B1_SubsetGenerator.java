@@ -6,14 +6,14 @@ public class B1_SubsetGenerator
 {
     static List<List<Integer>> allSubsets = new ArrayList<>();
 
-    public static List<List<Integer>> generateSubsets(int[] numbers) 
+    public static List<List<Integer>> generateSubsets(int[] numbers) //
     {
         allSubsets.clear();
         findSubsets(numbers, 0, new ArrayList<>());
         return allSubsets;
     }
 
-    public static void findSubsets(int[] numbers, int index, List<Integer> currentSubset) 
+    public static void findSubsets(int[] numbers, int index, List<Integer> currentSubset) //
     {
         if (index == numbers.length) 
         {

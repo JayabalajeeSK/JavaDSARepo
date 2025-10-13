@@ -5,7 +5,7 @@ import java.util.*;
 public class B3_PrimeSumFinderOptimized 
 {
 
-    public static boolean isPrime(int num) 
+    public static boolean isPrime(int num) //
     {
         if (num < 2) return false;
         int limit = (int) Math.sqrt(num); 
@@ -16,7 +16,7 @@ public class B3_PrimeSumFinderOptimized
         return true;
     }
 
-    public static List<Integer> generatePrimes(int P, int S) 
+    public static List<Integer> generatePrimes(int P, int S) //
     {
         List<Integer> primes = new ArrayList<>();
         for (int i = P + 1; i <= S; i++) 
@@ -27,7 +27,7 @@ public class B3_PrimeSumFinderOptimized
     }
 
 
-    public static void findPrimeCombinations(List<Integer> primes, int N, int S, int start, List<Integer> current) 
+    public static void findPrimeCombinations(List<Integer> primes, int N, int S, int start, List<Integer> current) //
     {
         if (current.size() == N) 
         {
@@ -73,6 +73,20 @@ public class B3_PrimeSumFinderOptimized
         findPrimeCombinations(primes, N, S, 0, new ArrayList<>());
     }
 }
+// Enter N (number of primes): 2
+// Enter P (prime to start after): 7
+// Enter S (sum of primes): 2
+
+// Prime combinations:
+
+// Enter N (number of primes): 2
+// Enter P (prime to start after): 2
+// Enter S (sum of primes): 8
+
+// Prime combinations:
+// [3, 5]
+
+
 // Enter N (number of primes): 3
 // Enter P (prime to start after): 2 
 // Enter S (sum of primes): 15

@@ -65,7 +65,7 @@ public class B4_StringPermutations
 // bac
 // bca
 // cab
-// cbak
+// cba
 
 // class Solution {
 //     public boolean checkInclusion(String s1, String s2) {
