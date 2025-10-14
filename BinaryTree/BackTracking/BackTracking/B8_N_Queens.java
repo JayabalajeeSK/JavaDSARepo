@@ -54,34 +54,15 @@ public class B8_N_Queens
     // Helper function to check if placing a queen at position (row,col) is safe
     private boolean isSafePlace(int n, char[][] nQueens, int row, int col) 
     {
-        // Check column
         for (int i = 0; i < n; i++) 
-        {
-            if (nQueens[i][col] == 'Q') 
-            {
-                return false;
-            }
-        }
+            if (nQueens[i][col] == 'Q') return false;
 
-        // Check upper-left diagonal
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) 
-        {
-            if (nQueens[i][j] == 'Q') 
-            {
-                return false;
-            }
-        }
+            if (nQueens[i][j] == 'Q') return false;
 
-        // Check upper-right diagonal
         for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) 
-        {
-            if (nQueens[i][j] == 'Q') 
-            {
-                return false;
-            }
-        }
+            if (nQueens[i][j] == 'Q') return false;
 
-        // If no conflicts found, position is safe
         return true;
     }
 
