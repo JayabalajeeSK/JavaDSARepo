@@ -8,7 +8,7 @@ public class B7_Rat_In_A_Maze
     static ArrayList<String> res;
     static int[][] visited;
 
-    public static void findPaths(int[][] m, int row, int col, String s, int n) 
+    public static void findPaths(int[][] maze, int row, int col, String s, int n) 
     {
         if (row == n - 1 && col == n - 1) 
         {
@@ -20,24 +20,24 @@ public class B7_Rat_In_A_Maze
             visited[row][col] = 1;
         }
 
-        if (row + 1 < n && visited[row + 1][col] == 0 && m[row + 1][col] == 1) 
+        if (row + 1 < n && visited[row + 1][col] == 0 && maze[row + 1][col] == 1) 
         {
-            findPaths(m, row + 1, col, s + "D", n); // DOWN
+            findPaths(maze, row + 1, col, s + "D", n); // DOWN
         }
 
-        if (col - 1 >= 0 && visited[row][col - 1] == 0 && m[row][col - 1] == 1) 
+        if (col - 1 >= 0 && visited[row][col - 1] == 0 && maze[row][col - 1] == 1) 
         {
-            findPaths(m, row, col - 1, s + "L", n); // LEFT
+            findPaths(maze, row, col - 1, s + "L", n); // LEFT
         }
 
-        if (col + 1 < n && visited[row][col + 1] == 0 && m[row][col + 1] == 1) 
+        if (col + 1 < n && visited[row][col + 1] == 0 && maze[row][col + 1] == 1) 
         {
-            findPaths(m, row, col + 1, s + "R", n); // RIGHT
+            findPaths(maze, row, col + 1, s + "R", n); // RIGHT
         }
 
-        if (row - 1 >= 0 && visited[row - 1][col] == 0 && m[row - 1][col] == 1) 
+        if (row - 1 >= 0 && visited[row - 1][col] == 0 && maze[row - 1][col] == 1) 
         {
-            findPaths(m, row - 1, col, s + "U", n); // UP
+            findPaths(maze, row - 1, col, s + "U", n); // UP
         }
         visited[row][col] = 0;
     }
