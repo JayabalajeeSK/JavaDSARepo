@@ -11,50 +11,64 @@ public class MaxMinHeapSort
         System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
 
-        int[] arr = new int[n];
+        // Using ArrayList instead of array
+        ArrayList<Integer> arrList = new ArrayList<>();
 
         System.out.println("Enter " + n + " elements:");
         for (int i = 0; i < n; i++) 
         {
-            arr[i] = sc.nextInt();
+            arrList.add(sc.nextInt());
         }
+        
+        // arrList.add(0,3);
 
+        // Min Heap and Max Heap
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 
-    
-        for (int num : arr) 
+        // Add all elements to both heaps
+        for (int num : arrList) 
         {
             minHeap.add(num);
             maxHeap.add(num);
         }
 
-        int[] ascending = new int[arr.length];
-        int i = 0;
+        System.out.println("Min heap: " + minHeap);
+        System.out.println("Max heap: " + maxHeap);
+
+        // Example of add(index, element)
+        // arrList.add(0, 3); // Adds 3 at the beginning
+        // System.out.println("After add(0, 3): " + arrList);
+
+        // Example of add(element)
+        // minHeap.add(3); // Adds 7 at the end
+        // maxHeap.add(3);
+        minHeap.remove(Integer.valueOf(5));
+        maxHeap.remove(Integer.valueOf(5));
+        System.out.println("Min heap: " + minHeap);
+        System.out.println("Max heap: " + maxHeap);
+
+        // Example of remove(element)
+        // arrList.remove(Integer.valueOf(5)); // Removes element 5 if it exists
+        // System.out.println("After remove(5): " + arrList);
+
+        // Build ascending order from minHeap
+        ArrayList<Integer> ascending = new ArrayList<>();
         while (!minHeap.isEmpty()) 
         {
-            ascending[i] = minHeap.poll();
-            i++;
+            ascending.add(minHeap.poll());
         }
 
-
-        int[] descending = new int[arr.length];
-        int j = 0;
+        // Build descending order from maxHeap
+        ArrayList<Integer> descending = new ArrayList<>();
         while (!maxHeap.isEmpty()) 
         {
-            descending[j] = maxHeap.poll();
-            j++;
+            descending.add(maxHeap.poll());
         }
-        System.out.println("Ascending Order:  " + Arrays.toString(ascending));
-        System.out.println("Descending Order: " + Arrays.toString(descending));
+
+        System.out.println("Ascending Order:  " + ascending);
+        System.out.println("Descending Order: " + descending);
 
         sc.close();
     }
-    
 }
-// Enter number of elements: 6
-// Enter 6 elements:
-// 1 5 2 8 4 9
-// Ascending Order:  [1, 2, 4, 5, 8, 9]
-// Descending Order: [9, 8, 5, 4, 2, 1]
