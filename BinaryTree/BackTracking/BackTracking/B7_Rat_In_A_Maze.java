@@ -95,6 +95,7 @@ public class B7_Rat_In_A_Maze
 // Paths from start to destination:
 // [DR, RD]
 
+//Alternative Start:
 // Enter the size of the maze (n): 2
 // Enter the maze grid (0 = blocked, 1 = open):
 // 1 1

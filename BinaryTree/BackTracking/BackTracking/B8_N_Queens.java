@@ -4,26 +4,26 @@ import java.util.*;
 
 public class B8_N_Queens
 {
-    // Main function to solve N-Queens problem
-    public List<List<String>> solveNQueens(int n) 
+   
+    public List<List<String>> solveNQueens(int n) //Leetcode 51
     {
-        List<List<String>> output = new ArrayList<>();  // Stores all valid solutions
-        char[][] nQueens = new char[n][n];  // Initialize empty board
+        List<List<String>> output = new ArrayList<>();  
+        char[][] nQueens = new char[n][n];  
         
         
-        for (int i = 0; i < n; i++) // Fill the board with dots
+        for (int i = 0; i < n; i++) 
         {
             Arrays.fill(nQueens[i], '.');
         }
         
-        solveNQueens(n, output, nQueens, 0); // Start solving from row 0
+        solveNQueens(n, output, nQueens, 0); 
         return output;
     }
 
-    // Recursive helper function to solve N-Queens problem
+   
     private void solveNQueens(int n, List<List<String>> output, char[][] nQueens, int row) 
     {
-        // Base case: if we've placed queens in all rows, we found a valid solution
+       
         if (row == n) 
         {
             List<String> solution = new ArrayList<>();
@@ -35,23 +35,22 @@ public class B8_N_Queens
             return;
         }
 
-        // Try placing queen in each column of current row
+       
         for (int col = 0; col < n; col++) 
         {
             
-            if (isSafePlace(n, nQueens, row, col)) // If current position is safe
+            if (isSafePlace(n, nQueens, row, col)) 
             {
                 
-                nQueens[row][col] = 'Q'; // Place queen
+                nQueens[row][col] = 'Q';
                 
-                solveNQueens(n, output, nQueens, row + 1); // Recursively solve for next row
+                solveNQueens(n, output, nQueens, row + 1); 
                 
-                nQueens[row][col] = '.'; // Backtrack: remove queen for trying next position
+                nQueens[row][col] = '.'; 
             }
         }
     }
 
-    // Helper function to check if placing a queen at position (row,col) is safe
     private boolean isSafePlace(int n, char[][] nQueens, int row, int col) 
     {
         for (int i = 0; i < n; i++) 
@@ -66,7 +65,7 @@ public class B8_N_Queens
         return true;
     }
 
-    // Main method with Scanner input
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);

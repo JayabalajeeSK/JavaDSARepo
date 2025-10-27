@@ -4,7 +4,7 @@ import java.util.*;
 
 public class B3_PrimeSumFinderOptimized 
 {
-
+//Prime number after Prime P with Sum S
     public static boolean isPrime(int num) //
     {
         if (num < 2) return false;
@@ -39,7 +39,7 @@ public class B3_PrimeSumFinderOptimized
         {
             int prime = primes.get(i);
 
-            if (prime > S) break;
+            if (prime > S) break; //Pruning
 
             current.add(prime);
 

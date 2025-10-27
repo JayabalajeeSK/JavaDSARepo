@@ -4,7 +4,7 @@ import java.util.*;
 
 public class B1_SubsetGenerator 
 {
-    static List<List<Integer>> allSubsets = new ArrayList<>();
+    static List<List<Integer>> allSubsets = new ArrayList<>(); //Leetcode 90
 
     public static List<List<Integer>> generateSubsets(int[] numbers) //
     {
@@ -61,28 +61,6 @@ public class B1_SubsetGenerator
 // [6]
 // [7]
 // []
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Enter number of elements: 3

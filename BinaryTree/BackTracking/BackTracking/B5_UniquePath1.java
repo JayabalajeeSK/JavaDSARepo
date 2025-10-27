@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class B5_UniquePath1 
 {
-    public int uniquePaths(int m, int n) 
+    public int uniquePaths(int m, int n) // Leetcode 62
     {
         int[][] dp = new int[m][n];
 

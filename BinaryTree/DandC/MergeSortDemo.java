@@ -21,12 +21,32 @@ public class MergeSortDemo
 
         while (i < n1 && j < n2) 
         {
-            if (L[i] <= R[j]) arr[k++] = L[i++];
-            else arr[k++] = R[j++];
+            if (L[i] <= R[j]) 
+            {
+                arr[k] = L[i];
+                k++;
+                i++;
+            }
+            else 
+            {
+                arr[k] = R[j];
+                k++;
+                j++;
+            }
         }
 
-        while (i < n1) arr[k++] = L[i++];
-        while (j < n2) arr[k++] = R[j++];
+        while (i < n1) 
+        {
+            arr[k] = L[i];
+            k++;
+            i++;
+        }
+        while (j < n2) 
+        {
+            arr[k] = R[j];
+            k++;
+            j++;
+        }
     }
 
     // Merge Sort 

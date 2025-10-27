@@ -2,7 +2,8 @@ package BackTracking;
 
 import java.util.*;
 
-public class B11_GraphColoring {
+public class B11_GraphColoring 
+{
     static Map<Integer, List<Integer>> graph = new HashMap<>();
     static int V;
 
@@ -34,9 +35,9 @@ public class B11_GraphColoring {
         return false;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter number of vertices: ");
         V = sc.nextInt();
 
@@ -47,7 +48,8 @@ public class B11_GraphColoring {
             graph.put(i, new ArrayList<>());
 
         System.out.println("Enter edges (u v):");
-        for (int i = 0; i < E; i++) {
+        for (int i = 0; i < E; i++) 
+        {
             int u = sc.nextInt();
             int v = sc.nextInt();
             graph.get(u).add(v);
@@ -59,7 +61,8 @@ public class B11_GraphColoring {
 
         int[] color = new int[V];
 
-        if (colorGraph(0, m, color)) {
+        if (colorGraph(0, m, color)) 
+        {
             System.out.println("\n Solution Exists. Colors are:");
             for (int i = 0; i < V; i++)
                 System.out.println("Vertex " + i + " → Color " + color[i]);
@@ -81,7 +84,7 @@ public class B11_GraphColoring {
 // Enter number of colors: 3
 
 //  Solution Exists. Colors are:
-// Vertex 0 ? Color 1
-// Vertex 1 ? Color 2
-// Vertex 2 ? Color 3
-// Vertex 3 ? Color 2
+// Vertex 0 -> Color 1
+// Vertex 1 -> Color 2
+// Vertex 2 -> Color 3
+// Vertex 3 -> Color 2

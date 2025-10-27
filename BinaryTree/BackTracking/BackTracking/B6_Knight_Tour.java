@@ -4,7 +4,7 @@ import java.util.*;
 
 public class B6_Knight_Tour 
 {
-    public boolean isValid(int[][] grid, int i, int j, int expectedValue, int n) 
+    public boolean isValid(int[][] grid, int i, int j, int expectedValue, int n) // Leetcode  2596
     {
         if (i < 0 || i >= n || j < 0 || j >= n || grid[i][j] != expectedValue) 
         {
